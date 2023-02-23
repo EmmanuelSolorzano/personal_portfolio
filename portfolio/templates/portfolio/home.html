@@ -1,0 +1,67 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+
+<h1>Emmanuel Solorzano's Portfolio</h1>
+
+<div class="intro">
+    <h2>Welcome to my portfolio</h2>
+    <p>A brief summary of my professional life</p>
+</div>
+
+<div class="container cards">
+    <h3>Recent Projects:</h3>
+    
+    <!-- Controls -->
+    <div class="d-flex justify-content-center mb-4" style="display: flex; justify-content: center; margin-top: 1rem;">
+        {% if projects.has_previous %}
+            <a class="carousel-control-prev position-relative" href="?page={{ projects.previous_page_number }}">
+        {% endif %}
+        <button class="carousel-control-prev position-relative" type="button">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        {% if projects.has_previous %}
+            </a>
+        {% endif %}
+
+        {% if projects.has_next %}
+            <a class="carousel-control-next position-relative" href="?page={{ projects.next_page_number }}">
+        {% endif %}   
+        <button class="carousel-control-next position-relative" type="button">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+        {% if projects.has_next %}
+        </a>
+        {% endif %}
+    </div>
+
+
+    <div class="row align-items-start padding-bottom" style="color: black;">
+        {% for project in projects %}
+            <div class="col">
+                <div class="card shadow-sm">
+                    {% load static %}
+                    {% if project.url %}
+                        <a href="{{ project.url }}">
+                    {% endif %} 
+                    <img src="{{ project.image.url }}" class="bd-placeholder-img card-img-top" width="100%" height="225">
+                    {% if project.url %}
+                        </a>
+                    {% endif %}
+                    <div class="card-body">
+                        <h4 style="color:black; font-weight:bold;">{{ project.title }}</h4>
+                        <p class="card-text">{{ project.description|striptags|truncatechars:60 }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="{% url 'portfolio:detailProject' project.id %}" class="btn btn-primary" style="text-align:center;">See project</a>
+                            <small class="text-muted">{{ project.dateProject|date:'M d Y'|upper }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>   
+</div>
+
+    
+{% endblock %}
