@@ -53,14 +53,17 @@ p {
 }
 
 .card { 
-    margin: 1rem;
+    margin: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
-.cards {
-    padding: 8rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+.cards { 
+    padding: 1.5rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
 }
+
 
 h3 {
     color: white;
@@ -153,14 +156,24 @@ h5 {
     height:315px;
 }
 
+.izq {
+    margin-left: 2rem;
+}
+
 @media screen and (max-width: 920px){
     .desc {
         padding: 1rem;
     }
-    .cards {
-        padding: 5rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+    .card { 
+        margin: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .cards { 
+        padding: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     .separation {
         margin-left: 1.5rem;
