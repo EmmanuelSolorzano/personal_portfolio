@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap" rel="stylesheet">     <meta charset="utf-8">
@@ -43,7 +44,12 @@
         </div>
     </nav>
 
-    <div class="wrapper">
+    <script>
+      $(document).ready(function () {
+      $("#all").fadeIn(2000);
+      });
+    </script>
+    <div class="wrapper"  id="all" style="display:none;">
       {% block content %}{% endblock %}
     </div>
     
