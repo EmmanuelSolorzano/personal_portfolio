@@ -186,6 +186,11 @@ h5 {
     h1 {
         text-align: center;
     }
+
+    .carousel-control-next, .carousel-control-prev {
+        width: 40%;
+    }
+
     .boxBlog {
         background-color: white;
         color: black;
