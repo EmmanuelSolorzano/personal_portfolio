@@ -153,16 +153,7 @@ h5 {
     height:315px;
 }
 
-@media screen and (max-width: 1024px){
-    #encabezado{
-        height: auto;
-    }
-    #contenido{
-        width: auto;
-    }
-    #barra_lateral{
-        display:none;
-    }
+@media (max-width: 2000px){
     .desc {
         padding: 1rem;
     }
