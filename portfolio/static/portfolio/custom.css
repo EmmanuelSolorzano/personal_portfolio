@@ -169,7 +169,10 @@ h5 {
         margin-left: 1rem;
         margin-right: 1rem;
     }
-    
+    .izq {
+        margin-left: 0;
+        text-align: center;
+    }
     .cards { 
         padding: 1.5rem;
         padding-left: 1rem;
