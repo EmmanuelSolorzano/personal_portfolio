@@ -9,7 +9,7 @@
 </div>
 
 <div class="container cards">
-    <h3>Recent Projects:</h3>
+    <h3 class="izq">Recent Projects:</h3>
     
     <!-- Controls -->
     <div class="d-flex justify-content-center mb-4" style="display: flex; justify-content: center; margin-top: 1rem;">
@@ -23,7 +23,8 @@
         {% if projects.has_previous %}
             </a>
         {% endif %}
-
+            <div class="separation">
+            </div>
         {% if projects.has_next %}
             <a class="carousel-control-next position-relative" href="?page={{ projects.next_page_number }}">
         {% endif %}   

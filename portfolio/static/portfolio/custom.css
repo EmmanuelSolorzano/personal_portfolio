@@ -147,3 +147,50 @@ h5 {
     border: 0.25rem solid;
     border-color: rgb(84, 82, 82);
 }
+
+.video{
+    width:560px; 
+    height:315px;
+}
+
+@media screen and (max-width: 600px){
+    #encabezado{
+        height: auto;
+    }
+    #contenido{
+        width: auto;
+    }
+    #barra_lateral{
+        display:none;
+    }
+    .desc {
+        padding: 1rem;
+    }
+    .cards {
+        padding: 5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .separation {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        margin-top: 1rem;;
+    }
+    h1 {
+        text-align: center;
+    }
+    .boxBlog {
+        background-color: white;
+        color: black;
+        border-radius: 0.5rem;
+        text-decoration-color: black;
+        height: 12rem;
+        width: 95%;
+        border: 0.25rem solid;
+        border-color: rgb(84, 82, 82);
+    }
+    .video{
+        width:80%; 
+        height:16rem;
+    }
+}
