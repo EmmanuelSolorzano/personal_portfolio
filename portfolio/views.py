@@ -11,17 +11,13 @@ def home(request):
     blogs = Blog.objects.order_by('-dateBlog')[:3]
     
     paginator = Paginator(projects, 3)
-    #length = int(request.GET.get('length', 12))
-    
+        
     numProjects = 0
     page = request.GET.get('page')
-    
 
     project = paginator.get_page(page)
 
     numProjects = len(project)
-
-    
 
     return render(request, 'portfolio/home.html', {'projects': project,'blogs': blogs,'numProjects': numProjects})
 
