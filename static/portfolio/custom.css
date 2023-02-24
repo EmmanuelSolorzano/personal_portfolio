@@ -53,14 +53,17 @@ p {
 }
 
 .card { 
-    margin: 1rem;
+    margin: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
-.cards {
-    padding: 8rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+.cards { 
+    padding: 1.5rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
 }
+
 
 h3 {
     color: white;
@@ -133,7 +136,7 @@ h5 {
     --bs-btn-disabled-border-color: black;
   }
 
-.media {
+.mediavid {
     text-align: center;
 }
 
@@ -146,4 +149,63 @@ h5 {
     width: 50rem;
     border: 0.25rem solid;
     border-color: rgb(84, 82, 82);
+}
+
+.video{
+    width:560px; 
+    height:315px;
+}
+
+.izq {
+    margin-left: 2rem;
+}
+
+@media screen and (max-width: 920px){
+    .desc {
+        padding: 1rem;
+    }
+    .card { 
+        margin: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .izq {
+        margin-left: 0;
+        text-align: center;
+    }
+    .cards { 
+        padding: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .separation {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        margin-top: 1rem;;
+    }
+    h1 {
+        text-align: center;
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+        width: 40%;
+    }
+
+    .boxBlog {
+        background-color: white;
+        color: black;
+        border-radius: 0.5rem;
+        text-decoration-color: black;
+        height: 12rem;
+        width: 95%;
+        border: 0.25rem solid;
+        border-color: rgb(84, 82, 82);
+    }
+    .video{
+        width:80%; 
+        height:16rem;
+    }
+    .row{
+        display:block;
+    }
 }
