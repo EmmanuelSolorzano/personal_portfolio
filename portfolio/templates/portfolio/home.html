@@ -10,7 +10,7 @@
 
 <div class="container cards">
     <h3 class="izq">Recent Projects:</h3>
-    
+
     <!-- Controls -->
     <div class="d-flex justify-content-center mb-4" style="display: flex; justify-content: center; margin-top: 1.5rem;">
         {% if projects.has_previous %}
@@ -27,7 +27,7 @@
             </div>
         {% if projects.has_next %}
             <a class="carousel-control-next position-relative" href="?page={{ projects.next_page_number }}">
-        {% endif %}   
+        {% endif %}
         <button class="carousel-control-next position-relative" type="button">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
@@ -45,14 +45,14 @@
                     {% load static %}
                     {% if project.url %}
                         <a href="{{ project.url }}">
-                    {% endif %} 
+                    {% endif %}
                     <img src="{{ project.image.url }}" class="bd-placeholder-img card-img-top" width="100%" height="225">
                     {% if project.url %}
                         </a>
                     {% endif %}
                     <div class="card-body">
                         <h4 style="color:black; font-weight:bold;">{{ project.title }}</h4>
-                        <p class="card-text">{{ project.description|striptags|truncatechars:50 }}</p>
+                        <p class="card-text">{{ project.description|striptags|truncatechars:40 }}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <a href="{% url 'portfolio:detailProject' project.id %}" class="btn btn-primary" style="text-align:center;">See project</a>
                             <small class="text-muted">{{ project.dateProject|date:'M d Y'|upper }}</small>
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                 </div>
-        {% endif %} 
+        {% endif %}
         {% if numProjects == 2 %}
                 <div class="col" style="visibility:hidden;">
                     <div class="card shadow-sm">
@@ -103,10 +103,10 @@
                         </div>
                     </div>
                 </div>
-        {% endif %} 
-    </div>   
+        {% endif %}
+    </div>
 </div>
 
 {{ projects.count }}
-    
+
 {% endblock %}
