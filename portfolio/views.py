@@ -28,5 +28,7 @@ def detailProject(request, project_id):
 
 
 def contact(request):
-
     return render(request, 'portfolio/contact.html')
+
+def emmaGift(request):
+    return render(request, 'portfolio/emma.html')

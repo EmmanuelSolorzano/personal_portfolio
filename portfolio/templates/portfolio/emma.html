@@ -1,0 +1,30 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+
+    <h1>Feliz cumpleaños amor</h1>
+    <p>
+        Quiero darte mi bendición en tu día para que todos tus días sean largos 
+        y prósperos. Gracias por estar siempre en mi vida y por ser la luz
+        que me ilumina y me acompaña. Cómo siempre te lo digo, eres luz. Te amo.
+    </p>
+
+    <p>
+        Fue difícil saber qué regalarte, así que quise darte algo que pudiera serte
+        útil, porque creo que es lo primero que piensas cada que tú vas a darme algo.
+        Cuando te vayas a tu concierto de Taylor es probable que vaya a hacer frío,
+        así que quise darte algo para que te vayas tapadita. No sé mucho de Taylor
+        así que Marissa me ayudó a escoger la hoodie más bonita.
+    </p>
+    {% load static %}
+    <img src="{% static 'portfolio/hoodie.jpg' %}" style="justify-content: center; height: 22rem; width: 100%;">
+
+    <p>
+        Según la página llega el día 26 de Abril, me hubiera encantado dártela hoy pero
+        no quería darle una que no fuera oficial porque usted solo se merece lo mejor.
+    </p>
+    <img src="{% static 'portfolio/pago1.jpg' %}" style="justify-content: center; height: 25rem; width: 100%;">
+    <img src="{% static 'portfolio/pago2.jpg' %}" style="justify-content: center; height: 20rem; width: 100%;">
+
+
+
+{% endblock %}

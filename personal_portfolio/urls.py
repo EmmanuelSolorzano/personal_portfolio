@@ -25,7 +25,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('portfolio/', include('portfolio.urls'), name='portfolio'),
     path('contact/', views.contact, name='contact'),
-    
+    path('emma-gift/', views.emmaGift, name='emma'),
     path('api/', include('api.urls')),
 ]
 
