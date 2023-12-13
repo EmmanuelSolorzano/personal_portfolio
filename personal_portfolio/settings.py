@@ -23,10 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-bx_snz1^8mud+tto=7p5p^keya!v*t5^o$aubh-t_la4ii=czp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['emmanuelsolorzano.com','www.emmanuelsolorzano.com', '147.182.206.135']
+ALLOWED_HOSTS = ['emmanuelsolorzano.com','www.emmanuelsolorzano.com', '147.182.206.135', '127.0.0.1']
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000", "http://emmanuelsolorzano.com", "https://emmanuelsolorzano.com",
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,9 +43,11 @@ INSTALLED_APPS = [
     'portfolio',
     'api',
     'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
