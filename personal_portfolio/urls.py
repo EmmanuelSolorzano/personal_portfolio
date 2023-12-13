@@ -20,13 +20,12 @@ from django.conf import settings
 from portfolio import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('blog/', include('blog.urls')),
-    path('portfolio/', include('portfolio.urls'), name='portfolio'),
-    path('contact/', views.contact, name='contact'),
-    path('emma-gift/', views.emmaGift, name='emma'),
-    path('api/', include('api.urls')),
+    path('django/admin/', admin.site.urls),
+    path('django/', views.home, name='home'),
+    path('django/blog/', include('blog.urls')),
+    path('django/portfolio/', include('portfolio.urls'), name='portfolio'),
+    path('django/contact/', views.contact, name='contact'),
+    path('django/api/', include('api.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
